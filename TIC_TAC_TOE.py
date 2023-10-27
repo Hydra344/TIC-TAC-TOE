@@ -59,6 +59,19 @@ def Button(Z):
         WinnerD = Winner
         LW['text'] = "Winner is: " + WinnerD
 
+    if Winner == "":
+        V = 0
+        for i in range(9):
+            if Arr[V].cget('text') == "X" or Arr[V].cget('text') == "O":
+                V = V + 1
+            if V == 9:
+                Winner = "Draw"
+                WinnerD = Winner
+                LW['text'] = "Winner is: " + WinnerD
+
+
+
+
     if Winner != "":
         Z = 1
         Winner = ""
@@ -67,7 +80,7 @@ def Button(Z):
             Arr[i]['state'] = "normal"
             Z = Z + 1
 
-QuitB = tk.Button(height=1,width=20,borderwidth=10, text="Quit",bg=('#2b2b2b'),fg=('#ff0059'),font=('Arial'),command=lambda: root.destroy())
+QuitB = tk.Button(height=1,width=18,borderwidth=10, text="Quit",bg=('#2b2b2b'),fg=('#ff0059'),font=('Arial'),command=lambda: root.destroy())
 
 LA = tk.Label(text=("Tic Tac Toe"),height=1,width=10,bg=('#2b2b2b'),fg=('#03a1fc'),font=('Arial'))
 LW = tk.Label(text=(""),height=1,width=15,bg=('#2b2b2b'),fg=('#03a1fc'),font=('Arial'))
