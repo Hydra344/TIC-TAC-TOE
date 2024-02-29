@@ -14,10 +14,10 @@ def Button(Z):
     Arr[Z]['state'] = "disabled"
     if P == "X":
         P = "O"
-        LC['text'] = "Curent Player: " + P
+        LC['text'] = "Current Player: " + P
     else:
         P = "X"
-        LC['text'] = "Curent Player: " + P
+        LC['text'] = "Current Player: " + P
 
     #Reihe
     if B0.cget('text') == B1.cget('text') == B2.cget('text'):
